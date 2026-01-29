@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Peoperty.MainPage">
+             x:Class="Peoperty.MainPage" Title="Peoperty">
 
-    <Grid>
+    <Grid BackgroundColor="#002b7f">
 
-        <Grid x:Name="MainGrid" ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="*,*,*,*,*,*,auto,*,*" RowSpacing="5" ColumnSpacing="5" Padding="20">
+        <Grid x:Name="MainGrid" ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="*,*,*,*,*,*,auto,*,*" RowSpacing="1" ColumnSpacing="1" Padding="20">
+
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="#002b7f" />
+                    <Setter Property="TextColor" Value="Yellow" />
+                    <Setter Property="FontAttributes" Value="Bold" />
+                    <Setter Property="FontSize" Value="26" />
+                    <Setter Property="CornerRadius" Value="0" />
+                    <Setter Property="BorderColor" Value="Black" />
+                    <Setter Property="BorderWidth" Value="2" />
+                </Style>
+            </Grid.Resources>
 
             <!-- Column 1 -->
             <Button Grid.Row="0" Grid.Column="0" Text="Sv" FontAttributes="Bold" FontSize="Medium"/>
@@ -63,10 +75,10 @@
             <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerLabel" FontSize="Medium" IsVisible="false"/>
 
             <Button Grid.Row="8" Grid.Column="0" Text="Answer" Clicked="AnswerClicked" FontAttributes="Bold" FontSize="Medium"/>
-            <Button Grid.Row="8" Grid.Column="0" Text="Yes" x:Name="YesButton"  IsVisible="False" FontAttributes="Bold" FontSize="Medium"/>
-            <Button Grid.Row="8" Grid.Column="2" Text="No" x:Name="NoButton" IsVisible="False" FontAttributes="Bold" FontSize="Medium"/>
-            
+            <Button Grid.Row="8" Grid.Column="0" Text="Yes" x:Name="YesButton"  IsVisible="False" FontAttributes="Bold" FontSize="Medium" Clicked="YesClicked"/>
+            <Button Grid.Row="8" Grid.Column="2" Text="No" x:Name="NoButton" IsVisible="False" FontAttributes="Bold" FontSize="Medium" Clicked="NoClicked"/>
 
+            <Label Grid.Row="8" Grid.Column="5" x:Name="Scoreboard" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="End"/>
 
 
 
