@@ -82,6 +82,7 @@ namespace Peoperty
             {
                 Debug.WriteLine("error");
             }
+            button.IsEnabled = false;
 
         }
 
