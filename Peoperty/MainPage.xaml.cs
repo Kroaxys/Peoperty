@@ -78,7 +78,7 @@ namespace Peoperty
         private void NoClicked(object sender, EventArgs e)
         {
             AnswerEntry.IsVisible = true;
-            AnswerLabel.IsVisible = false   
+            AnswerLabel.IsVisible = false;   
             YesButton.IsVisible = false;
             NoButton.IsVisible = false;
             AnswerEntry.Text = "";
