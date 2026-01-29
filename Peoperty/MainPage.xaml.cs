@@ -5,7 +5,8 @@ namespace Peoperty
 {
     public partial class MainPage : ContentPage
     {
-        
+        int buttonText = 0;
+        int score;
         public MainPage()
         {
             InitializeComponent();
@@ -62,6 +63,28 @@ namespace Peoperty
             
         }
 
+        private void YesClicked(object sender, EventArgs e)
+        {
+            score += buttonText;
+            Scoreboard.Text = score.ToString();
+            AnswerEntry.IsVisible = true;
+            AnswerLabel.IsVisible = false;
+            YesButton.IsVisible = false;
+            NoButton.IsVisible = false;
+            AnswerEntry.Text = "";
+            PersonalAnswerLabel.Text = "";
+        }
+            
+        private void NoClicked(object sender, EventArgs e)
+        {
+            AnswerEntry.IsVisible = true;
+            AnswerLabel.IsVisible = false;   
+            YesButton.IsVisible = false;
+            NoButton.IsVisible = false;
+            AnswerEntry.Text = "";
+            PersonalAnswerLabel.Text = "";
+        }
+
         private void PointButtonClicked(object sender, EventArgs e)
         {
             AnswerEntry.IsVisible = true;
@@ -73,7 +96,7 @@ namespace Peoperty
             Button button = (Button)sender;
             //int buttontext = int.Parse(button.Text);  
             int column = MainGrid.GetColumn(button);
-            if (int.TryParse(button.Text, out int buttonText))
+            if (int.TryParse(button.Text, out buttonText))
             {
                 QuestionGiver(column, buttonText);
                 AnswerGiver(column, buttonText);
@@ -82,11 +105,13 @@ namespace Peoperty
             {
                 Debug.WriteLine("error");
             }
+            button.IsEnabled = false;
 
         }
 
         private void AnswerGiver(int subject, int points)
         {
+
             var answer = Questions.FirstOrDefault(q => q.Subject == subject && q.Points == points);
 
             AnswerLabel.Text = $"Rätt svar är: {answer.Answer}";
