@@ -1,23 +1,69 @@
 ﻿using System.Diagnostics;
-using System.Globalization;
+using Peoperty.Model;
 
 namespace Peoperty
 {
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
             InitializeComponent();
         }
+
+        private List<Question> Questions = new()
+        {
+            // Svenska (0)
+            new Question { Subject = 0, Points = 200, Text = "Denna ordklass används för att beskriva en person, en plats, en sak eller abstrakta begrepp." },
+            new Question { Subject = 0, Points = 400, Text = "Det är ett skiljetecken som används vid slutet av en fråga." },
+            new Question { Subject = 0, Points = 600, Text = "När en berättelse återger vad en person tänker eller säger utan citattecken." },
+            new Question { Subject = 0, Points = 800, Text = "När en text är uppbyggd för att övertyga läsaren med tydlig argumentation." },
+            new Question { Subject = 0, Points = 1000, Text = "När en talare försöker väcka känslor hos publiken." },
+
+            // SO (1)
+            new Question { Subject = 1, Points = 200, Text = "Den största religionen i världen." },
+            new Question { Subject = 1, Points = 400, Text = "Sveriges högsta lagstiftande församling." },
+            new Question { Subject = 1, Points = 600, Text = "Året då andra världskriget började." },
+            new Question { Subject = 1, Points = 800, Text = "En samhällsform där folket väljer representanter." },
+            new Question { Subject = 1, Points = 1000, Text = "Floden som kallas livets flod i Afrika." },
+
+            // Matte (2)
+            new Question { Subject = 2, Points = 200, Text = "Resultatet av en multiplikation." },
+            new Question { Subject = 2, Points = 400, Text = "Ett tal som bara är delbart med 1 och sig självt." },
+            new Question { Subject = 2, Points = 600, Text = "Visar hur många gånger grundtalet multipliceras med sig självt." },
+            new Question { Subject = 2, Points = 800, Text = "Metod för att bryta ner ett tal i faktorer." },
+            new Question { Subject = 2, Points = 1000, Text = "En funktion som beskriver procentuell förändring." },
+
+            // Kemi (3)
+            new Question { Subject = 3, Points = 200, Text = "Grundämnet med kemiskt tecken H." },
+            new Question { Subject = 3, Points = 400, Text = "Detta pH-värde är neutralt." },
+            new Question { Subject = 3, Points = 600, Text = "Kroppens viktigaste lösningsmedel." },
+            new Question { Subject = 3, Points = 800, Text = "När ett ämne reagerar med vatten, ex rost." },
+            new Question { Subject = 3, Points = 1000, Text = "Modell för elektroners energinivåer i atomen." },
+
+            // Engelska (4)
+            new Question { Subject = 4, Points = 200, Text = "A formal synonym for 'help'." },
+            new Question { Subject = 4, Points = 400, Text = "A verb meaning to examine critically." },
+            new Question { Subject = 4, Points = 600, Text = "Adjective meaning intentionally vague." },
+            new Question { Subject = 4, Points = 800, Text = "A noun meaning widespread unease." },
+            new Question { Subject = 4, Points = 1000, Text = "Sentence with two independent clauses improperly joined." }
+        };
+
+
         private void AnswerClicked(object sender, EventArgs e)
         {
             QuestionLabel.Text = String.Empty;
             PersonalAnswerLabel.Text = $"Ditt svar är: {AnswerEntry.Text}";
             AnswerLabel.Text = $"Rätt svar är: ";
+            AnswerEntry.IsVisible = false;
+            AnswerLabel.IsVisible = true;
+            
         }
 
         private void PointButtonClicked(object sender, EventArgs e)
         {
+            AnswerEntry.IsVisible = true;
+            AnswerLabel.IsVisible = false;
             PersonalAnswerLabel.Text = String.Empty;
             Button button = (Button)sender;
             //int buttontext = int.Parse(button.Text);  
@@ -33,136 +79,18 @@ namespace Peoperty
 
         }
 
-        private string QuestionGiver(int subject, int points)
+        private string AnswerGiver()
         {
-            if (subject == 0)
-            {
-                switch (points)
-                {
-                    case 200:
-                        QuestionLabel.Text = "Denna ordklass används för att beskriva en person, en plats, en sak eller abstrakta begrepp.";
-                        break;
-
-                    case 400:
-                        QuestionLabel.Text = "Det är ett skiljetecken som används vid slutet av en fråga.";
-                        break;
-
-                    case 600:
-                        QuestionLabel.Text = "När en berättelse återger vad en person tänker eller säger utan att använda citattecken, och det är blandat med berättarens språk.";
-                        break;
-
-                    case 800:
-                        QuestionLabel.Text = "När en text är uppbyggd så att argumenten presenteras i en genomtänkt och tydlig ordning för att övertyga läsaren.";
-                        break;
-
-                    case 1000:
-                        QuestionLabel.Text = "När en talare försöker övertyga genom att väcka känslor hos publiken, med exempelvis starka ord eller personliga exempel.";
-                        break;
-                }
-            }
-            else if (subject == 1)
-            {
-                switch (points)
-                {
-                    case 200:
-                        QuestionLabel.Text = "Den största religionen i världen, med flest anhängare, grundad i Mellanöstern.";
-                        break;
-
-                    case 400:
-                        QuestionLabel.Text = "Sveriges högsta församling där de stiftas lagar, församlingen består av folkvalda representanter. Ett exempel är att de beslutar om statens budget.";
-                        break;
-
-                    case 600:
-                        QuestionLabel.Text = "Detta år började andra världskriget när Tyskland invaderade Polen.";
-                        break;
-
-                    case 800:
-                        QuestionLabel.Text = "En samhällsform där medborgarna väljer representanter som styr landet åt dem.";
-                        break;
-
-                    case 1000:
-                        QuestionLabel.Text = "Denna flod, som rinner genom Egypten och Sudan, har varit central för civilisationer i över 5000 år och kallas ofta ”livets flod” i Afrika.";
-                        break;
-                }
-            }
-            else if (subject == 2)
-            {
-                switch (points)
-                {
-                    case 200:
-                        QuestionLabel.Text = "Resultatet av en multiplikation kallas detta";
-                        break;
-
-                    case 400:
-                        QuestionLabel.Text = "Ett tal som är delbart med 1 och sig självt, exempelvis 2, 3, 5 och 7";
-                        break;
-
-                    case 600:
-                        QuestionLabel.Text = "Den del av ett tal som visar hur många gånger grundtalet ska multipliceras med sig självt, exempelvis 2^3";
-                        break;
-
-                    case 800:
-                        QuestionLabel.Text = "Den här metoden används för att bryta ner ett tal eller ett uttryck i faktorer, till exempel 12=2⋅2⋅3.";
-                        break;
-
-                    case 1000:
-                        QuestionLabel.Text = "Denna typ av funktion har formen f(x)=a⋅bx = a och används ofta för att beskriva tillväxt, nedbrytning eller förändring som sker procentuellt.";
-                        break;
-                }
-
-            }
-            else if (subject == 3)
-            {
-                switch (points)
-                {
-                    case 200:
-                        QuestionLabel.Text = "Detta grundämne har kemiskt tecken H och är universums vanligaste.";
-                        break;
-
-                    case 400:
-                        QuestionLabel.Text = "Detta pH-värde räknas som neutralt.";
-                        break;
-
-                    case 600:
-                        QuestionLabel.Text = "Detta ämne fungerar som lösningsmedel i de flesta kemiska reaktioner i kroppen.";
-                        break;
-
-                    case 800:
-                        QuestionLabel.Text = "När ett ämne reagerar med vatten. Ex rost.";
-                        break;
-
-                    case 1000:
-                        QuestionLabel.Text = "Denna modell beskriver hur elektroner rör sig i bestämda energinivåer runt atomkärnan.";
-                        break;
-                }
-
-            }
-            else if (subject == 4)
-            {
-                switch (points)
-                {
-                    case 200:
-                        QuestionLabel.Text = "A formal synonym for “help.”";
-                        break;
-
-                    case 400:
-                        QuestionLabel.Text = "This verb means “to examine critically and in detail.”";
-                        break;
-
-                    case 600:
-                        QuestionLabel.Text = "This adjective describes language that is intentionally vague or ambiguous.";
-                        break;
-
-                    case 800:
-                        QuestionLabel.Text = "A noun meaning “a widespread feeling of unease or dissatisfaction.”";
-                        break;
-
-                    case 1000:
-                        QuestionLabel.Text = "The term for a sentence containing two independent clauses joined without proper punctuation.";
-                        break;
-                }
-            }
+            
+            
             return "";
+        }
+
+        private void QuestionGiver(int subject, int points)
+        {
+            var question = Questions.FirstOrDefault(q => q.Subject == subject && q.Points == points);
+
+            QuestionLabel.Text = question.Text;
         }
 
 

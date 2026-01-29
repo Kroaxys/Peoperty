@@ -60,7 +60,7 @@
             <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" x:Name="PersonalAnswerLabel" FontSize="Large"/>
             
             <Entry Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerEntry"/>
-            <Entry Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerLabel"/>
+            <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerLabel" FontSize="Medium" IsVisible="false"/>
 
             <Button Grid.Row="8" Grid.Column="0" Text="Answer" Clicked="AnswerClicked" FontAttributes="Bold" FontSize="Medium"/>
             <Button Grid.Row="8" Grid.Column="0" Text="Yes" IsVisible="False" FontAttributes="Bold" FontSize="Medium"/>
