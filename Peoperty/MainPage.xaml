@@ -5,55 +5,66 @@
 
     <Grid>
 
-        <Grid ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="5">
+        <Grid x:Name="MainGrid" ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="*,*,*,*,*,*,auto,*,*" RowSpacing="5" ColumnSpacing="5" Padding="20">
 
             <!-- Column 1 -->
-            <Button Grid.Row="0" Grid.Column="0" Text="200" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="1" Grid.Column="0" Text="400" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="2" Grid.Column="0" Text="600" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="3" Grid.Column="0" Text="800" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="4" Grid.Column="0" Text="1000" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="0" Text="Sv" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="1" Grid.Column="0" Text="200" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="2" Grid.Column="0" Text="400" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="3" Grid.Column="0" Text="600" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="4" Grid.Column="0" Text="800" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="5" Grid.Column="0" Text="1000" Clicked="PointButtonClicked" FontSize="Medium"/>
+
 
             <!-- Column 2 -->
-            <Button Grid.Row="0" Grid.Column="1" Text="200" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="2" Grid.Column="1" Text="400" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="1" Grid.Column="1" Text="600" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="3" Grid.Column="1" Text="800" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="4" Grid.Column="1" Text="1000" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="SO" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="200" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="400" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="600" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="800" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="1000" Clicked="PointButtonClicked" FontSize="Medium"/>
 
             <!-- Column 3 -->
-            <Button Grid.Row="0" Grid.Column="2" Text="200" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="1" Grid.Column="2" Text="400" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="2" Grid.Column="2" Text="600" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="3" Grid.Column="2" Text="800" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="4" Grid.Column="2" Text="1000" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="Matte" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="200" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="400" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="600" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="4" Grid.Column="2" Text="800" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="5" Grid.Column="2" Text="1000" Clicked="PointButtonClicked" FontSize="Medium"/>
 
             <!-- Column 4 -->
-            <Button Grid.Row="0" Grid.Column="3" Text="200" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="1" Grid.Column="3" Text="400" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="2" Grid.Column="3" Text="600" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="3" Grid.Column="3" Text="800" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="4" Grid.Column="3" Text="1000" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="3" Text="Kemi" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="1" Grid.Column="3" Text="200" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="2" Grid.Column="3" Text="400" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="600" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="4" Grid.Column="3" Text="800" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="5" Grid.Column="3" Text="1000" Clicked="PointButtonClicked" FontSize="Medium"/>
 
             <!-- Column 5 -->
-            <Button Grid.Row="0" Grid.Column="4" Text="200" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="1" Grid.Column="4" Text="400" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="2" Grid.Column="4" Text="600" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="3" Grid.Column="4" Text="800" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="4" Grid.Column="4" Text="1000" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="4" Text="Engelska" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="1" Grid.Column="4" Text="200" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="2" Grid.Column="4" Text="400" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="3" Grid.Column="4" Text="600" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="4" Grid.Column="4" Text="800" Clicked="PointButtonClicked" FontSize="Medium"/>
+            <Button Grid.Row="5" Grid.Column="4" Text="1000" Clicked="PointButtonClicked" FontSize="Medium"/>
 
             <!-- Column 6 -->
-            <Button Grid.Row="0" Grid.Column="5" Text="200" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="1" Grid.Column="5" Text="400" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="2" Grid.Column="5" Text="600" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="3" Grid.Column="5" Text="800" Clicked="PointButtonClicked"/>
-            <Button Grid.Row="4" Grid.Column="5" Text="1000" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="5" Text="Temp"/>
+            <Button Grid.Row="1" Grid.Column="5" Text="200" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="2" Grid.Column="5" Text="400" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="3" Grid.Column="5" Text="600" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="4" Grid.Column="5" Text="800" Clicked="PointButtonClicked"/>
+            <Button Grid.Row="5" Grid.Column="5" Text="1000" Clicked="PointButtonClicked"/>
 
-            <Label Grid.Row="5" Grid.Column="0" x:Name="AnswerLabel" FontSize="Large"/>
-            <Entry Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerEntry"/>
-            <Button Grid.Row="7" Grid.Column="0" Text="Answer" Clicked="AnswerClicked" />
-            <Button Grid.Row="7" Grid.Column="0" Text="Yes" IsVisible="False" />
-            <Button Grid.Row="7" Grid.Column="2" Text="No" IsVisible="False" />
+            <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" x:Name="QuestionLabel" FontSize="Large"/>
+            <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" x:Name="PersonalAnswerLabel" FontSize="Large"/>
+            
+            <Entry Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerEntry"/>
+            <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerLabel" FontSize="Medium" IsVisible="false"/>
+
+            <Button Grid.Row="8" Grid.Column="0" Text="Answer" Clicked="AnswerClicked" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="8" Grid.Column="0" Text="Yes" x:Name="YesButton"  IsVisible="False" FontAttributes="Bold" FontSize="Medium"/>
+            <Button Grid.Row="8" Grid.Column="2" Text="No" x:Name="NoButton" IsVisible="False" FontAttributes="Bold" FontSize="Medium"/>
             
 
 
