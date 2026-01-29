@@ -18,7 +18,7 @@ namespace Peoperty
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            
             return builder.Build();
         }
     }
