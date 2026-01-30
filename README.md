@@ -1,11 +1,11 @@
 # Peopardy
 
-Elis Gillberg
-Vanessa Olsson
-Melvin Larsson
-Adam Swanberg
-Matas Norvaisas
-Viktor Österberg
+* Elis Gillberg
+* Vanessa Olsson
+* Melvin Larsson
+* Adam Swanberg
+* Matas Norvaisas
+* Viktor Österberg
 
 ### Tävlar i kategori: 
 
