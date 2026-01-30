@@ -11,17 +11,17 @@ Viktor Österberg
 
 ## Projekt & Teknisk- beskrivning
 
-peopardy
+Peopardy
 
 Ett jeopardy baserat spel speciellt gjort för elever som hittar pluggande tråkigt.
 
 Appen funkar på samma sätt som ett jeopardy-spel där du får 5 kategorier att välja ifrån. I dessa kategorier finns det 5 rutor var, varje markerad med sin representativa poäng mängd. 200-400-600-800-1000 är de rutor du kan välja mellan i varje kategori. Men var försiktig. Ju mer poäng desto svårare frågor.
 
-##Instruktioner
+## Instruktioner
 
 Starta applikationen. Efter att applikationen har startat är du redan i spelet.
 
-klicka på den rutan du vill ta dig an. Då kommer en fråga upp vid botten av skärmen och du har möjlighet att svara, svar-rutan ligger under frågan. Ansvar hamnar på DIG som spelar att rätta dig själv och inte fuska. Efter att du har svarat och kollat ditt svar så trycker du in den mängd poäng frågan var värt om du hade rätt. Annars om du hade fel trycker du inte,och får 0 poäng (lycka till nästa försök). Knappen för att lägga till poäng ligger botten höger.
+Klicka på den rutan du vill ta dig an. Då kommer en fråga upp vid botten av skärmen och du har möjlighet att svara, svar-rutan ligger under frågan. Ansvar hamnar på DIG som spelar att rätta dig själv och inte fuska. Efter att du har svarat och kollat ditt svar så trycker du in den mängd poäng frågan var värt om du hade rätt. Annars om du hade fel trycker du inte,och får 0 poäng (lycka till nästa försök). Knappen för att lägga till poäng ligger botten höger.
 
 
 ### Externt producerade komponenter
