@@ -47,7 +47,15 @@ namespace Peoperty
             new Question { Subject = 4, Points = 400, Text = "A verb meaning to examine critically.", Answer = "Vad är analyze?" },
             new Question { Subject = 4, Points = 600, Text = "Adjective meaning intentionally vague.", Answer = "Vad är equivocal?" },
             new Question { Subject = 4, Points = 800, Text = "A noun meaning widespread unease.", Answer = "Vad är malaise?" },
-            new Question { Subject = 4, Points = 1000, Text = "Sentence with two independent clauses improperly joined.", Answer = "Vad är comma splice?" }
+            new Question { Subject = 4, Points = 1000, Text = "Sentence with two independent clauses improperly joined.", Answer = "Vad är comma splice?" },
+
+            //Kroppens Hälsa (5)
+            new Question { Subject = 5, Points = 200, Text = "Detta begrepp beskriver kroppens förmåga att arbeta under längre tid utan att bli trött.", Answer = "Vad är kondition?" },
+            new Question { Subject = 5, Points = 400, Text = "Detta är antalet hjärtslag per minut och kan mätas både i vila och under fysisk aktivitet.", Answer = "Vad är puls?" },
+            new Question { Subject = 5, Points = 600, Text = "Denna typ av träning syftar till att öka rörligheten i leder och muskler och minska risken för skador.", Answer = "Vad är rörlighetsträning? (Stretching) " },
+            new Question { Subject = 5, Points = 800, Text = "Den del av kroppen som ansvarar för balans och koordination, viktig vid idrott och komplexa rörelser.", Answer = "Vad är lillhjärnan?" },
+            new Question { Subject = 5, Points = 1000, Text = "Detta tillstånd uppstår när kroppen får för lite vila eller näring i förhållande till träning, vilket kan leda till minskad prestationsförmåga och ökad skaderisk.", Answer = "Vad är överbelastning?" },
+
         };
 
 
