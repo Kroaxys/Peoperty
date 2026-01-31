@@ -70,8 +70,9 @@
 
             <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" x:Name="QuestionLabel" FontSize="Large" TextColor="Yellow"/>
             <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" x:Name="PersonalAnswerLabel" FontSize="Large" TextColor="Yellow"/>
-            
-            <Entry Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerEntry"/>
+            <Border Stroke="Yellow" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6">
+                <Entry x:Name="AnswerEntry" />
+            </Border>
             <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" x:Name="AnswerLabel" FontSize="Medium" IsVisible="false" TextColor="Yellow"/>
 
             <Button Grid.Row="8" Grid.Column="0" Text="Answer" Clicked="AnswerClicked" FontAttributes="Bold" FontSize="Medium"/>
